@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The Sale Starts in:....</h1>
+    <p id="countDown"></p>
+</body>
+<script>
+    var countDownTime = new Date("May 27, 2024 11:00:00").getTime()
+
+    setInterval(fn, 1000)
+
+    function fn(){
+        var now = new Date().getTime()
+
+        var DifferenceInTime = countDownTime - now;  // in miliseconds
+
+        var days = Math.floor(DifferenceInTime / (1000 * 60 * 60 * 24))
+
+        var hours = Math.floor(DifferenceInTime % (1000 * 60 * 60 * 24) / (1000 * 60 *60))
+
+        var minutes = Math.floor(DifferenceInTime % (1000 * 60 * 60) / (1000 * 60))
+
+        var seconds = Math.floor((DifferenceInTime % (1000 * 60)) / 1000)
+
+        var paragraph = document.getElementById('countDown')
+
+        paragraph.innerHTML = `${days} days ${hours} hours ${minutes} mins ${seconds} seconds`
+    }
+</script>
+</html>
