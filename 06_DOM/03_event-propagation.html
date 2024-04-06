@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 2px solid red;
+            padding: 60px;
+        }
+    </style>
+</head>
+<body>
+    <div id="grandparent">
+        <div id="parent">
+            <div id="child">
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let grandparent = document.getElementById('grandparent');
+        let parent = document.getElementById('parent');
+        let child = document.getElementById('child');
+
+        grandparent.addEventListener('click', function(event){
+            console.log("grandparent clicked");
+        }, false) //bubble up
+
+        parent.addEventListener('click', function(event){
+            console.log("parent clicked");
+        }, false) //bubble up
+
+        parent.addEventListener('click', function(event){
+            console.log("2nd parent clicked");
+            event.stopImmediatePropagation() 
+        }, false)
+
+        parent.addEventListener('click', function(event){
+            console.log("3rd parent clicked");
+        }, false)
+
+        child.addEventListener('click', function(event){
+            console.log("child clicked");
+        }, false) //bubble up
+
+</script>
+</body>
+</html>
