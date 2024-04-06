@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p id="para">Hello World</p>
+        <button id="btn">Click me</button>
+    </div>
+</body>
+<script>
+    var paragraph = document.querySelector('#para')
+    var button = document.querySelector('#btn')
+
+    button.addEventListener('click', function(e){
+        paragraph.innerHTML = 'Hello Cuvette'
+    })
+
+    // Mouse events
+    paragraph.addEventListener('mouseover', function(e){
+        paragraph.style.color = 'red'
+    })
+
+    paragraph.addEventListener('dblclick', function(e){
+        console.log("Double clicked");
+    })
+
+    // Keyboard Event
+    document.addEventListener('keydown', function(e){
+        console.log("Key down");
+    })
+
+    document.addEventListener('keyup', function(e){
+        console.log("Key up");
+    })
+
+    document.addEventListener('keypress', function(e){
+        console.log("Key Press");
+        console.log(e.key);
+        console.log(e.code);
+    })
+
+    // Non pritable keys (except enter) not track by keypress
+</script>
+</html>

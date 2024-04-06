@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <button class="btn">Click me</button>
+        <p class="btn">Hello boys </p>
+        <button>2nd Button</button>
+    </div>
+
+    <div >
+        <p class="para">hello</p>
+        <p class="para">namoam</p>
+    </div>
+</body>
+<script>
+    // Accessing by ID
+    var div = document.getElementById('div1')
+    console.log(div);
+
+    // Accessing by classname
+    var btn1 = document.getElementsByClassName('btn')
+    console.log(btn1);
+    console.log(btn1[0]);
+
+    // Accessing by tagname
+    var tag = document.getElementsByTagName('button')
+    console.log(tag);
+    console.log(tag[0]);
+
+    // Accessing by querySelector
+    var div3 = document.querySelector('p.para')  //only select first match element from all elem.
+    console.log(div3);            
+
+    // Accessing by querySelector.All
+    var divi = document.querySelectorAll('p.para')
+    console.log(divi[1]);
+
+</script>
+</html>
