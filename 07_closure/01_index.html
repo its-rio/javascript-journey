@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <script>
+        //IIFE => imedietly invoked function expression
+
+        (function(){
+            var x = 20
+            console.log(x);
+        })
+        ()
+
+        // closure
+        
+        function outer(){
+            var a = 90
+            function inner(){
+                console.log(a);
+            }
+            return inner
+        }
+        var z = outer()
+        console.log(z);
+    </script>
+</body>
+</html>

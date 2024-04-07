@@ -15,7 +15,7 @@
     <div id="grandparent">
         <div id="parent">
             <div id="child">
-
+                
             </div>
         </div>
     </div>
@@ -37,6 +37,7 @@
         parent.addEventListener('click', function(event){
             console.log("2nd parent clicked");
             event.stopImmediatePropagation() 
+            
         }, false)
 
         parent.addEventListener('click', function(event){
