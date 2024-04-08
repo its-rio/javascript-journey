@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let student = {
+            name: "rishi",
+            age: 21,
+            city: function(){
+                console.log("He live in pune");
+            }
+        }
+        student.favColor = "blue"
+        console.log(student);
+
+        let student2 = Object.create ({
+            name: "rishiman",
+            age: 22,
+            city: function(){
+                console.log("He live in nashik");
+            }
+        })
+        console.log(student2);
+    </script>
+</body>
+</html>
