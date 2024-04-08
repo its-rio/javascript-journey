@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        function Square(side){
+            this.side = side
+            this.draw = function(){
+                console.log("Draw fn");
+                console.log(this);
+            }
+        }
+// new object is created names square
+
+        const square = new Square(5)
+        square.draw()
+
+        const square2 =new  Square(10)
+        square2.draw()  // name was not added
+        square2.name = "Rihana"
+        square2.draw()
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        //  call, apply, bind
+
+        const student = {
+            name: "rio",
+            age:22,
+            printname(){
+                console.log("Name is ", this.name);
+            }
+        }
+        student.printname()
+        
+        const student2 = {
+            name: "rishi",
+            age:21
+        }
+        student.printname.call(student2)
+        
+        
+    </script>
+</body>
+</html>
