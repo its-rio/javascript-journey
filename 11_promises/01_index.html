@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let myPromise =  new Promise(function(resolve, reject){
+            let cleanRoom = false;
+
+            if(cleanRoom){
+                resolve("room is cleaned")
+            } // if it accept we use resolve
+            else{
+                reject("room is dirty")
+            }
+            // if it fails we use reject
+        })
+//  way to consume the promise
+        myPromise.then((data)=>{
+            console.log(".then is execute");
+            console.log(data);
+        })
+        .catch((data)=>{
+            console.log(".catch is executed");
+            console.log(data);
+        })
+        // Always execute this
+        .finally(()=>{
+            console.log("Finally!!!");
+        })
+    </script>
+</body>
+</html>

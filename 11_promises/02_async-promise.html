@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        let myPromise =  new Promise(function(resolve, reject){
+            let cleanRoom = false;
+
+            if(cleanRoom){
+                resolve("room is cleaned")
+            } // if it accept we use resolve
+            else{
+                reject("room is dirty")
+            }
+            // if it fails we use reject
+        })
+
+// anouther way to consume the promise
+        async function go(){
+            try{
+                const data = await myPromise
+                console.log(data); 
+            }
+            catch(e){
+                console.log(e);
+            }
+        }
+        go()
+
+    </script>
+</body>
+</html>
